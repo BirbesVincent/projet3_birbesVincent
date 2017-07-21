@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Client :  127.0.0.1
--- Généré le :  Mer 19 Juillet 2017 à 13:26
+-- Généré le :  Ven 21 Juillet 2017 à 13:26
 -- Version du serveur :  5.7.14
 -- Version de PHP :  5.6.25
 
@@ -67,7 +67,15 @@ INSERT INTO `comments` (`id`, `author`, `content`, `date`, `articles_id`) VALUES
 (4, 'Nathalie', 'Je cherche des coworkers', '2017-07-13 10:54:28', 3),
 (5, 'Lionel', 'Je viens de commencer', '2017-07-13 10:54:28', 3),
 (6, 'Gabriel', 'Vraiment excellent ce site', '2017-07-13 10:54:28', 2),
-(7, 'Lilian', 'Moi j\'ai vraiment pas saisi le fetchAll()', '2017-07-13 10:54:28', 3);
+(7, 'Lilian', 'Moi j\'ai vraiment pas saisi le fetchAll()', '2017-07-13 10:54:28', 3),
+(8, 'Marc', 'Yoyhoy', '2017-07-21 15:22:46', 1),
+(9, 'Edouard', 'Bwah', '2017-07-21 15:22:46', 1),
+(10, 'Yaris', 'Bijour', '2017-07-21 15:22:46', 2),
+(11, 'Moi', 'Je sais pas', '2017-07-21 15:22:46', 1),
+(12, 'Yann', 'Une lan ?', '2017-07-21 15:22:46', 1),
+(13, 'Tintin', 'Et voilà', '2017-07-21 15:23:39', 2),
+(14, 'Milou', 'Waf', '2017-07-21 15:23:39', 2),
+(15, 'Capitaine', 'Mousaillon', '2017-07-21 15:23:56', 3);
 
 --
 -- Index pour les tables exportées
@@ -101,7 +109,7 @@ ALTER TABLE `articles`
 -- AUTO_INCREMENT pour la table `comments`
 --
 ALTER TABLE `comments`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 --
 -- Contraintes pour les tables exportées
 --
