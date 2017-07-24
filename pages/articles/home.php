@@ -3,7 +3,7 @@
 <div class="content">
 
     <?php foreach ( App::getInstance()->getTable('Article')->getNumberOfComments() as $post): ?>
-    
+
     <div class="travelling">
         <div class="col-md-10 travelling1">
             <h1><a href="#"><?= $post->title; ?></a></h1>

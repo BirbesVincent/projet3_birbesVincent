@@ -59,10 +59,14 @@ class MysqlDatabase extends Database {
      * @$one : variable : permet d'avoir 1/plusieurs résultat(s)
      * return $data : donnée(s) en objet(s)
      */
-    public function prepare($statement, $values, $class, $one = false){
+    public function prepare($statement, $values, $class = null, $one = false){
         $req = $this->getPDO()->prepare($statement);
         $req->execute($values);
-        $req->setFetchMode(PDO::FETCH_CLASS, $class);
+        if ($class === null){
+            $req->setFetchMode(PDO::FETCH_OBJ);
+        } else {
+            $req->setFetchMode(PDO::FETCH_CLASS, $class);
+        }
         if ($one){
             $data = $req->fetch();
         } else {

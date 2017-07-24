@@ -18,6 +18,8 @@ if ($page === 'home'){
     require ROOT. '/pages/articles/home.php';
 } elseif ($page === 'post.detail'){
     require ROOT . '/pages/articles/Article.php';
+} elseif ($page === 'login'){
+    require ROOT . '/pages/users/login.php';
 }
 
 $content = ob_get_clean();

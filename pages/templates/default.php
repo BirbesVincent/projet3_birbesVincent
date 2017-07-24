@@ -47,6 +47,7 @@
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,800,700' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
     <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.js"></script>
 </head>
 <body>
 <!-- header -->
