@@ -1,2 +1,5 @@
-# projet3_birbesVincent
-Projet OpenClassRoom 3 : créer un blog pour un écrivain
+BlogOPC
+
+Projet dans le parcous Chef de projet - Développement
+
+Mise en place d'un blog
