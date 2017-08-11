@@ -4,6 +4,14 @@
 
 </div>
 
+<div class="col-lg-12 text-center">
+    <form method="post">
+        <a href="?p=post.add" class="btn btn-success">Ajouter un nouvel article</a>
+    </form>
+</div>
+
+<img src="images/ligne.png" style=" width: 100%; margin: 2% 0% 1% 0%;">
+
 <div>
     <ul class="nav nav-tabs nav-justified">
         <li class="active"><a href="#tab-articles" data-toggle="tab">Articles</a></li>
@@ -19,6 +27,8 @@
         </div>
     </div>
 </div>
+
+
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>

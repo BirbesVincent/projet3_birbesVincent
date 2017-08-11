@@ -5,11 +5,12 @@ $posts = App::getInstance()->getTable('Article')->all();
 <table class="table table-bordered">
     <thead>
     <tr>
-        <td>ID</td>
-        <td>Titre</td>
-        <td>Contenu</td>
-        <td>date</td>
-        <td>Editer</td>
+        <th class="col-xs-0.5">ID</th>
+        <th class="col-xs-1.5">Titre</th>
+        <th class="col-xs-9">Contenu</th>
+        <th class="col-xs-1">date</th>
+        <th class="col-xs-1">Editer</th>
+        <th class="col-xs-1">Supprimer</th>
     </tr>
     </thead>
     <tbody>
@@ -20,7 +21,13 @@ $posts = App::getInstance()->getTable('Article')->all();
             <td><?= $post->content; ?></td>
             <td><?= $post->date; ; ?></td>
             <td>
-                <a class="btn btn-primary" href="?posts.edit&id=<?= $post->id;?>">Editer</a>
+                <a class="btn btn-info"  href="?p=posts.edit&id=<?= $post->id;?>">Editer</a>
+            </td>
+            <td>
+                <form action="?p=post.delete" method="post">
+                    <input type="hidden"  name="id" value="<?= $post->id; ?>">
+                    <button type="submit" class="btn btn-danger" href="?p=posts.delete&id=<?= $post->id;?>">Supprimer</button>
+                </form>
             </td>
         </tr>
 

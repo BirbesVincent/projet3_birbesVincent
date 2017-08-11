@@ -46,6 +46,7 @@
     <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,800,700' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+    <link href="css/"
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.js"></script>
 </head>
@@ -57,7 +58,7 @@
             <a href="#"><img src="images/logo.png" class="img-responsive" alt="" /></a>
         </div>
     </div>
-    <div class="header-bottom">
+    <div class="header-bottom" style="margin-bottom: 2%;">
         <div class="container">
             <div class="head-nav">
                 <span class="menu"> </span>
@@ -81,29 +82,10 @@
     </div>
 </div>
 
-<div class="body-wrap">
+
     <div class="container">
         <?= $content; ?>
     </div>
-            <div class="loadmore1">
-                <a class="load" href="#">Charger articles plus anciens</a>
-            </div>
-</div>
 
-
-<!-- footer -->
-<div class="footer">
-    <div class="container">
-        <p>Template by <a href="http://w3layouts.com" target="_blank"> w3layouts</a></p>
-        <div class="social">
-            <ul>
-                <li><a href="#"><i class="fb"> </i></li></a>
-                <li><a href="#"><i class="twt"> </i></li></a>
-                <div class="clearfix"></div>
-            </ul>
-        </div>
-    </div>
-</div>
-<!-- footer -->
 </body>
 </html>

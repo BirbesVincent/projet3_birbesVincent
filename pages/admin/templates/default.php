@@ -85,10 +85,7 @@
     <div class="container">
         <?= $content; ?>
     </div>
-            <div class="loadmore1">
-                <a class="load" href="#">Charger articles plus anciens</a>
-            </div>
-</div>
+
 
 
 <!-- footer -->

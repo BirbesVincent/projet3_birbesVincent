@@ -2,10 +2,9 @@
 define('ROOT', dirname(__DIR__));
 
 require ROOT . '/app/App.php';
-
 App::load();
-
-if (isset($_GET['p'])){
+if (isset($_GET['p']))
+    {
         $page = $_GET['p'];
     }
     else
@@ -23,4 +22,7 @@ if ($page === 'home'){
 }
 
 $content = ob_get_clean();
+if ($page === 'post.detail'){
+    require ROOT . "/pages/templates/template_article.php";
+} else
 require ROOT . "/pages/templates/default.php";
