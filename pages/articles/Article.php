@@ -32,9 +32,7 @@ $comments = App::getInstance()->getTable('Comment')->findAllCommentsByArticle($_
                     <td><?= $comment->content; ?></td>
                     <td><?= $comment->date; ?></td>
                     <td>
-                        <form method="post">
-                            <button class="btn btn-danger">Signaler</button>
-                        </form>
+                        <a class="btn btn-danger" style="width: 100%;" href="?p=comment.report&id=<?= $comment->id;?>">Supprimer</a>
                     </td>
                 </tr>
             <?php endforeach; ?>

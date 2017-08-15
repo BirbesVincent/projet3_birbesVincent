@@ -11,17 +11,17 @@ if (!empty($_POST)){
     ]);
 
     if($result){
-
-        header('Location: admin?p=posts.edit&id=' . App::getInstance()->getDb()->lastInsertId());
-        ?>
-        <div class="alert alert-success">L'article à bien été ajouté !</div>
-        <?php
+        header('Location: admin?p=home');
+        $_SESSION['create_article'] = true;
     }
-}
+} ?>
 
+<a href="admin.php" class="btn btn-primary"><span class="glyphicon glyphicon-chevron-left"></span> Retour au menu</a>
+
+<?php
 $form = new BootstrapForm($_POST); ?>
 
-<form method="post">
+<form method="post" style="padding-top: 2%;padding-bottom: 2%;">
     <?= $form->input('title', 'Titre de l\'article'); ?>
     <?= $form->input('content', 'Contenu', ['type' => 'textarea']); ?>
     <button class="btn btn-primary">Envoyer</button>

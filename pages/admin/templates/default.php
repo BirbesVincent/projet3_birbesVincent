@@ -1,39 +1,3 @@
-<!--<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="../../favicon.ico">
-
-    <title>T</title>
-
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-  </head>
-
-  <body>
-
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <a class="navbar-brand" href="index.php">BlogOPC</a>
-        </div>
-      </div>
-    </nav>
-
-    <div class="container">
-      <div class="starter-template" style="padding-top: 100px;">
-
-      $content
-
-      </div>
-
-    </div>
-  </body>
-</html>-->
-
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -56,15 +20,20 @@
         <div class="logo">
             <a href="#"><img src="images/logo.png" class="img-responsive" alt="" /></a>
         </div>
+
     </div>
     <div class="header-bottom">
         <div class="container">
             <div class="head-nav">
                 <span class="menu"> </span>
                 <ul>
-                    <li class="active"><a href="index.php">Accueil</a></li>
-                    <li><a href="#">A propos de l'auteur</a></li>
-                    <li><a href="#">Archives</a></li>
+                    <li><a href="admin.php">Accueil de l'administration</a></li>
+                    <li>
+                        <a href="index.php?p=home">Retour au site</a>
+                    </li>
+                    <div class="connexion-access">
+                        <a class="btn btn-danger" style="position:absolute; top: 3%; right: 3%;" href="index?p=logout" role="button">Se déconnecter</a>
+                    </div>
                     <div class="clearfix"> </div>
                 </ul>
             </div>
@@ -81,26 +50,10 @@
     </div>
 </div>
 
-<div class="body-wrap">
+<div class="body-wrap" style="padding-top: 1%;">
     <div class="container">
         <?= $content; ?>
     </div>
 
-
-
-<!-- footer -->
-<div class="footer">
-    <div class="container">
-        <p>Template by <a href="http://w3layouts.com" target="_blank"> w3layouts</a></p>
-        <div class="social">
-            <ul>
-                <li><a href="#"><i class="fb"> </i></li></a>
-                <li><a href="#"><i class="twt"> </i></li></a>
-                <div class="clearfix"></div>
-            </ul>
-        </div>
-    </div>
-</div>
-<!-- footer -->
 </body>
 </html>

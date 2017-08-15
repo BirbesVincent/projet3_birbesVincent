@@ -20,8 +20,6 @@ if(!$auth->logged()){
     $app->forbidden();
 }
 
-
-
 ob_start();
 if ($page === 'home'){
     require ROOT. '/pages/admin/articles/index.php';
@@ -33,6 +31,10 @@ if ($page === 'home'){
     require ROOT . '/pages/admin/articles/addArticle.php';
 } elseif ($page === 'post.delete'){
     require ROOT . '/pages/admin/articles/deleteArticle.php';
+} elseif ($page === 'posts.deleteComment'){
+    require ROOT . '/pages/admin/articles/deleteComment.php';
+} elseif ($page === 'posts.ReportComment'){
+    require ROOT . '/pages/admin/articles/ReportComment.php';
 }
 
 $content = ob_get_clean();

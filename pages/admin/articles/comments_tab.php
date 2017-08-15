@@ -1,15 +1,15 @@
 <?php
-$comments = App::getInstance()->getTable('Comment')->all();
+$comments = App::getInstance()->getTable('Comment')->AllReportedComments();
 ?>
 
 <table class="table table-bordered">
     <thead>
     <tr>
-        <td>ID</td>
-        <td>Auteur</td>
-        <td>Contenu</td>
-        <td>date</td>
-        <td>Editer</td>
+        <th class="col-xs-1">ID</th>
+        <th class="col-xs-1">Auteur</th>
+        <th class="col-xs-7">Contenu</th>
+        <th class="col-xs-2">date</th>
+        <th class="col-xs-1">Action</th>
     </tr>
     </thead>
     <tbody>
@@ -20,11 +20,21 @@ $comments = App::getInstance()->getTable('Comment')->all();
             <td><?= $comment->content; ?></td>
             <td><?= $comment->date; ; ?></td>
             <td>
-                <a class="btn btn-primary" href="?posts.edit&id=<?= $comment->id;?>">Editer</a>
+                <form style="padding-top: 1%;" action="?p=posts.ReportComment" method="post">
+                    <input type="hidden"  name="id" value="<?= $comment->id; ?>">
+                    <button type="submit" class="btn btn-danger" href="?p=posts.ReportComment&id=<?= $comment->id;?>">Supprimer</button>
+                </form>
             </td>
         </tr>
-
     <?php endforeach; ?>
     </tbody>
 </table>
 
+    <?php
+        if (empty($comments)){
+            ?>
+                <div class="col-lg-12 text-center">
+                    <p>Il n'y aucun commentaire(s) signalé(s) !</p>
+                </div>
+            <?php
+        }

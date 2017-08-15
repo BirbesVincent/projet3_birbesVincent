@@ -24,6 +24,14 @@ class Table{
         return $this->query('SELECT * FROM ' . $this->table);
     }
 
+    public function report($id){
+        return $this->query("UPDATE {$this->table} SET report = 1 WHERE id = ?",[$id]);
+    }
+
+    public function AllReportedComments(){
+        return $this->query("SELECT * FROM {$this->table} WHERE report = 1");
+    }
+
     public function query($statement, $values = null, $one = false){
         if($values){
             return $this->db->prepare(
@@ -62,7 +70,6 @@ class Table{
         }
         $attributes[] = $id;
         $sql_part = implode(',',$sql_parts);
-        var_dump($attributes);
         return $this->query("UPDATE ($this->table) SET $sql_part WHERE id = ?", $attributes, true);
     }
 

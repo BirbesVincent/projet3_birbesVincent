@@ -14,12 +14,15 @@ if (!empty($_POST)){
         <div class="alert alert-success">L'article à bien été ajouté !</div>
         <?php
     }
-}
+}?>
 
+<a href="admin.php" class="btn btn-primary"><span class="glyphicon glyphicon-chevron-left"></span> Retour au menu</a>
+
+<?php
 $post = $postTable->findById($_GET['id']);
 $form = new BootstrapForm($post); ?>
 
-<form method="post">
+<form style="padding-top: 2%;padding-bottom: 2%;" method="post">
 <?= $form->input('title', 'Titre de l\'article'); ?>
 <?= $form->input('content', 'Contenu', ['type' => 'textarea']); ?>
 <button class="btn btn-primary">Envoyer</button>

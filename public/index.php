@@ -19,6 +19,8 @@ if ($page === 'home'){
     require ROOT . '/pages/articles/Article.php';
 } elseif ($page === 'login'){
     require ROOT . '/pages/users/login.php';
+} elseif ($page === 'logout'){
+    require ROOT . '/pages/users/logout.php';
 }
 
 $content = ob_get_clean();
