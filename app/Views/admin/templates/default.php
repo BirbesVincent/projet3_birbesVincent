@@ -12,6 +12,8 @@
     <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.js"></script>
+    <script src="https://cloud.tinymce.com/stable/tinymce.min.js?apiKey=2136xmxc75rqszpcqb4fa0kg0yw0amafw4e8fslb1wwn0yzs"></script>
+    <script>tinymce.init({ selector:'textarea' });</script>
 </head>
 <body>
 <!-- header -->
@@ -20,19 +22,18 @@
         <div class="logo">
             <a href="#"><img src="images/logo.png" class="img-responsive" alt="" /></a>
         </div>
-
     </div>
     <div class="header-bottom">
         <div class="container">
             <div class="head-nav">
                 <span class="menu"> </span>
                 <ul>
-                    <li><a href="admin.php">Accueil de l'administration</a></li>
+                    <li><a href="index?p=admin.posts.index">Accueil de l'administration</a></li>
                     <li>
-                        <a href="index.php?p=home">Retour au site</a>
+                        <a href="index?p=posts.index">Retour au site</a>
                     </li>
                     <div class="connexion-access">
-                        <a class="btn btn-danger" style="position:absolute; top: 3%; right: 3%;" href="index?p=logout" role="button">Se déconnecter</a>
+                        <a class="btn btn-danger" style="position:absolute; top: 3%; right: 3%;" href="index?p=admin.users.logout" role="button">Se déconnecter</a>
                     </div>
                     <div class="clearfix"> </div>
                 </ul>

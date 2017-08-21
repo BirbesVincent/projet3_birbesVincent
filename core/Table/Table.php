@@ -57,7 +57,7 @@ class Table{
 
     public function findAllCommentsByArticle($id){
         return $this->query("SELECT * 
-                            FROM {$this->table} 
+                            FROM comments 
                             WHERE articles_id = ?", [$id]);
     }
 
@@ -82,6 +82,10 @@ class Table{
         }
         $sql_part = implode(',',$sql_parts);
         return $this->query("INSERT INTO $this->table SET $sql_part", $attributes, true);
+    }
+
+    public function addComment($fields){
+
     }
 
     public function delete($id){

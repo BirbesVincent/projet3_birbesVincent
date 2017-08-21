@@ -9,22 +9,16 @@ if (isset($_GET['p']))
     }
     else
     {
-        $page = 'home';
+        $page = 'posts.index';
     }
 
-ob_start();
-if ($page === 'home'){
-    require ROOT. '/pages/articles/home.php';
-} elseif ($page === 'post.detail'){
-    require ROOT . '/pages/articles/Article.php';
-} elseif ($page === 'login'){
-    require ROOT . '/pages/users/login.php';
-} elseif ($page === 'logout'){
-    require ROOT . '/pages/users/logout.php';
-}
-
-$content = ob_get_clean();
-if ($page === 'post.detail'){
-    require ROOT . "/pages/templates/template_article.php";
-} else
-require ROOT . "/pages/templates/default.php";
+    $page = explode('.', $page);
+    if ($page[0] == 'admin'){
+        $action = $page[2];
+        $controller = '\App\Controller\\' . $page[0] . '\\' . ucfirst($page[1]) . 'Controller';
+    } else {
+        $action = $page[1];
+        $controller = '\App\Controller\\' . ucfirst($page[0]) . 'Controller';
+    }
+    $controller = new $controller;
+    $controller->$action();

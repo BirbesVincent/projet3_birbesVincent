@@ -1,6 +1,3 @@
-<?php
-$posts = App::getInstance()->getTable('Article')->all();
-?>
 
 <table class="table table-bordered">
     <thead>
@@ -20,14 +17,13 @@ $posts = App::getInstance()->getTable('Article')->all();
             <td><?= $post->content; ?></td>
             <td><?= $post->date; ; ?></td>
             <td>
-                <a class="btn btn-info" style="width: 100%;" href="?p=posts.edit&id=<?= $post->id;?>">Editer</a>
-                <form style="padding-top: 2%;" action="?p=post.delete" method="post">
+                <a class="btn btn-info" style="width: 100%;" href="?p=admin.posts.edit&id=<?= $post->id;?>">Editer</a>
+                <form style="padding-top: 2%;" action="?p=admin.posts.delete" method="post">
                     <input type="hidden"  name="id" value="<?= $post->id; ?>">
-                    <button type="submit" class="btn btn-danger" href="?p=posts.delete&id=<?= $post->id;?>">Supprimer</button>
+                    <button type="submit" class="btn btn-danger" href="?p=admin.posts.delete&id=<?= $post->id;?>">Supprimer</button>
                 </form>
             </td>
         </tr>
     <?php endforeach; ?>
     </tbody>
 </table>
-

@@ -1,9 +1,4 @@
-
-
-<?php
-$post = App::getInstance()->getTable('Article')->findById($_GET['id']);
-$comments = App::getInstance()->getTable('Comment')->findAllCommentsByArticle($_GET['id']);
-?>
+<?php use Core\HTML\BootstrapForm;?>
 
 <div class="container">
     <div class="col-lg-12" style="border: solid black 1px;">
@@ -14,6 +9,16 @@ $comments = App::getInstance()->getTable('Comment')->findAllCommentsByArticle($_
         <img src="images/ligne.png" style=" width: 100%; margin: 2% 0% 1% 0%;">
             <h1 class="text-center">Commentaires</h1>
         <img src="images/ligne.png" style=" width: 100%; margin: 1% 0% 2% 0%;">
+
+    <?php
+    $form = new BootstrapForm($comments); ?>
+    <form class="form-inline" style="padding-top: 2%;padding-bottom: 2%; " method="post">
+    <?= $form->input('author', 'Votre Pseudo'); ?>
+    <?= $form->input('content', 'Votre message'); ?>
+    <button class="btn btn-primary">Envoyer</button>
+    </form>
+
+    <img src="images/ligne.png" style=" width: 100%; margin: 1% 0% 2% 0%;">
 
     <div class="row">
         <table class="table table-bordered">
@@ -32,11 +37,12 @@ $comments = App::getInstance()->getTable('Comment')->findAllCommentsByArticle($_
                     <td><?= $comment->content; ?></td>
                     <td><?= $comment->date; ?></td>
                     <td>
-                        <a class="btn btn-danger" style="width: 100%;" href="?p=comment.report&id=<?= $comment->id;?>">Supprimer</a>
+                        <form style="padding-top: 2%; width: 100%;" action="?p=posts.Report" method="post">
+                            <input type="hidden"  name="id" value="<?= $comment->id; ?>">
+                            <button type="submit" style="width: 100%;" class="btn btn-danger" href="?p=posts.Report&id=<?= $comment->id;?>">Reporter</button>
+                        </form>
                     </td>
                 </tr>
             <?php endforeach; ?>
     </div>
-
-
 </div>
