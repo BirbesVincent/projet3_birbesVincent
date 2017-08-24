@@ -19,42 +19,42 @@
 <!-- header -->
 <div class="banner">
     <div class="container">
-        <div class="logo">
-            <a href="#"><img src="images/logo.png" class="img-responsive" alt="" /></a>
-        </div>
-    </div>
-    <div class="header-bottom">
-        <div class="container">
-            <div class="head-nav">
-                <span class="menu"> </span>
-                <ul>
-                    <li><a href="index?p=admin.posts.index">Accueil de l'administration</a></li>
-                    <li>
-                        <a href="index?p=posts.index">Retour au site</a>
-                    </li>
-                    <div class="connexion-access">
-                        <a class="btn btn-danger" style="position:absolute; top: 3%; right: 3%;" href="index?p=admin.users.logout" role="button">Se déconnecter</a>
-                    </div>
-                    <div class="clearfix"> </div>
-                </ul>
+        <nav class="navbar navbar-fixed-top navbar-inverse" style="font-size: 120%">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" data-target="#myNavbar" data-toggle="collapse" class="navbar-toggle">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="index?p=posts.index">Billet Simple pour l'Alaska by Jean Forteroche</a>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="index?p=posts.index">Accueil</a></li>
+                        <li><a href="index?p=posts.archives">Archives</a></li>
+                        <li><a href="index?p=admin.users.login" role="button">Administration</a></li>
+                        <?php if ($success_auth = true): ?>
+                            <li></liv><a class="btn btn-danger" style="color: white" href="index?p=admin.users.logout" role="button">Se déconnecter</a></li>
+                        <?php endif; ?>
+                    </ul>
+                </div>
             </div>
-            <!-- script-for-nav -->
-            <script>
-                $( "span.menu" ).click(function() {
-                    $( ".head-nav ul" ).slideToggle(300, function() {
-                        // Animation complete.
-                    });
-                });
-            </script>
-            <!-- script-for-nav -->
-        </div>
+        </nav>
     </div>
 </div>
 
-<div class="body-wrap" style="padding-top: 1%;">
-    <div class="container">
+<div class="body-wrap" style="padding-top: 1%; background: linear-gradient(#C4C3C6, white);">
+    <div class="container" style="background-color: white">
         <?= $content; ?>
     </div>
+
+    <div class="container footer">
+        <!-- footer -->
+        <?php require __DIR__ . '../../../templates/footer.php'; ?>
+        <!-- footer -->
+    </div>
+</div>
 
 </body>
 </html>

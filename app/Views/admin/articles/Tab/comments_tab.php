@@ -14,7 +14,7 @@
             <td><?= $comment->id; ?></td>
             <td><?= $comment->author; ?></td>
             <td><?= $comment->content; ?></td>
-            <td><?= $comment->date; ; ?></td>
+            <td><?= $comment->date_comment; ; ?></td>
             <td>
                 <form style="padding-top: 1%;" action="?p=admin.posts.deleteComment" method="post">
                     <input type="hidden"  name="id" value="<?= $comment->id; ?>">

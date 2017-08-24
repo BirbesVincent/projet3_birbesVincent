@@ -1,6 +1,3 @@
-<?php
-$comments = App::getInstance()->getTable('Comment')->AllReportedComments();
-?>
 
     <table class="table table-bordered">
         <thead>
@@ -13,7 +10,7 @@ $comments = App::getInstance()->getTable('Comment')->AllReportedComments();
         </tr>
         </thead>
         <tbody>
-        <?php foreach ($comments as $comment): ?>
+        <?php foreach ($reportedComments as $comment): ?>
             <tr>
                 <td><?= $comment->id; ?></td>
                 <td><?= $comment->author; ?></td>

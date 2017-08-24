@@ -18,65 +18,41 @@
 <!-- header -->
 <div class="banner">
     <div class="container">
-        <div class="logo">
-            <a href="#"><img src="images/logo.png" class="img-responsive" alt="" /></a>
-        </div>
-        <div class="connexion-access">
-            <a class="btn btn-danger" style="position:absolute; top: 3%; right: 3%;" href="index?p=admin.users.login" role="button">Accès Administrateur</a>
-        </div>
-    </div>
-    <div class="header-bottom">
-        <div class="container">
-            <div class="head-nav">
-                <span class="menu"> </span>
-                <ul>
-                    <li><a href="index?p=posts.index">Accueil</a></li>
-                    <div class="clearfix"> </div>
-                </ul>
+        <nav class="navbar navbar-fixed-top navbar-inverse" style="font-size: 120%">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" data-target="#myNavbar" data-toggle="collapse" class="navbar-toggle">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="index?p=posts.index">Billet Simple pour l'Alaska by Jean Forteroche</a>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="index?p=posts.index">Accueil</a></li>
+                        <li><a href="index?p=posts.archives">Archives</a></li>
+                        <li><a href="index?p=admin.users.login" role="button">Administration</a></li>
+                    </ul>
+                </div>
             </div>
-            <!-- script-for-nav -->
-            <script>
-                $( "span.menu" ).click(function() {
-                    $( ".head-nav ul" ).slideToggle(300, function() {
-                        // Animation complete.
-                    });
-                });
-            </script>
-            <!-- script-for-nav -->
-        </div>
+        </nav>
     </div>
 </div>
 
-<div class="body-wrap" style="padding-top: 2%;  ">
-    <div class="container">
+<div class="body-wrap" style="padding-top: 1%; margin:auto;background: linear-gradient(#C4C3C6, white);">
+    <div class="container" style="background-color: white">
         <?= $content; ?>
     </div>
 </div>
 
-<!-- footer -->
-<div class="footer" style="padding-top: 2%;">
-    <div class="container"  style="background-color: #1B242F">
-    <div class="row">
-        <div class="col-lg-5">
-            <h4 class="text-center" style="padding-top: 5%; color: white">Qui suis-je ?</h4>
-            <p>Oh dear! She's stuck in an infinite loop, and he's an idiot! Well, that's love for you.
-                I had more, but you go ahead. Are you crazy? I can't swallow that. Check it out, y'all. Everyone who was invited is here.</p>
-        </div>
-        <div class="col-lg-5">
-            <h4 class="text-center" style="padding-top: 5%; color: white">Pourquoi ce site ?</h4>
-            <p>Oh dear! She's stuck in an infinite loop, and he's an idiot! Well, that's love for you.
-                I had more, but you go ahead. Are you crazy? I can't swallow that. Check it out, y'all. Everyone who was invited is here.</p>
-        </div>
-        <div class="col-lg-2">
-            <ul class="list-group" style="padding-top: 5%;">
-                <li class="list-group-item" style="background-color: seagreen;"><a href="facebook.com"><img class="logo_social_networks img-responsive" style="padding-right: 5%; height:auto; width: auto;" src="images/facebook_logo1.png"></a></li>
-                <li class="list-group-item" style="background-color: seagreen;"><a href="twitter.com"><img class="logo_social_networks img-responsive" style="padding-right: 5%; height:auto; width: auto;" src="images/twitter1.png"></a></li>
-                <li class="list-group-item" style="background-color: seagreen;"><a href="instagram.com"><img class="logo_social_networks img-responsive" style="padding-right: 5%; height:auto; width: auto;" src="images/instagram.png"></a></li>
-            </ul>
-        </div>
-    </div>
+<div class="footer">
+    <div class="container">
+        <!-- footer -->
+        <?php require 'footer.php'; ?>
+        <!-- footer -->
     </div>
 </div>
-<!-- footer -->
+
 </body>
 </html>

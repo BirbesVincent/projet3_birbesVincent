@@ -6,6 +6,11 @@ use Core\Controller\Controller;
 use \App;
 use Core\HTML\BootstrapForm;
 
+/**
+ * Class PostsController
+ * @package App\Controller
+ * permet
+ */
 class PostsController extends AppController {
 
     public function __construct()
@@ -15,9 +20,8 @@ class PostsController extends AppController {
         $this->loadModel('Comment');
     }
 
-
-    public function index(){
-        $posts = $this->Article->getArticlesAndComments();
+    public function archives(){
+        $posts = $this->Article->getAllArticlesAndComments();
         $this->render('articles.home', compact('posts'));
     }
 
@@ -38,7 +42,7 @@ class PostsController extends AppController {
                 return $this->show();
             }
         }
-        $this->render('articles.Article', compact('post','allComment', 'comments'));
+        $this->render('articles.Article', compact('post','allComment', 'comments', 'footer'));
     }
 
     public function report(){
@@ -50,4 +54,8 @@ class PostsController extends AppController {
         return $res->index();
     }
 
+    public function index(){
+            $posts = $this->Article->getArticlesAndComments();
+            $this->render('articles.home', compact('posts'));
+    }
 }

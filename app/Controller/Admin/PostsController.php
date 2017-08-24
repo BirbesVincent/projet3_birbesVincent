@@ -16,10 +16,11 @@ class PostsController extends AppController {
         if ($_SESSION['auth_valid'] === false || empty($_SESSION['auth_valid'])){
             header('Location:index.php');
         }
-
-        $posts = $this->Article->All();
-        $comments = $this->Comment->All();
-        $this->render('admin.articles.index', compact('posts','comments', 'success'));
+        $success_auth = true;
+        $posts = $this->Article->all();
+        $comments = $this->Comment->all();
+        $reportedComments = $this->Comment->AllReportedComments();
+        $this->render('admin.articles.index', compact('posts','comments', 'reportedComments', 'success_auth'));
     }
 
     public function delete(){
@@ -54,20 +55,20 @@ class PostsController extends AppController {
         $this->render('admin.articles.edit', compact('postTable', 'form' ));
     }
 
-    public function addPost(){
+    public function addPost()
+    {
         $postTable = $this->Article;
-        if (!empty($_POST)){
+        if (!empty($_POST)) {
             $result = $postTable->create([
                 'title' => $_POST['title'],
                 'content' => $_POST['content']
             ]);
-
-            if($result){
+            if ($result) {
                 $this->index();
-
             }
+        } else {
+            $form = new BootstrapForm($_POST);
+            $this->render('admin.articles.edit', compact('postTable', 'form'));
         }
-        $form = new BootstrapForm($_POST);
-        $this->render('admin.articles.edit', compact('postTable', 'form'));
     }
 }
