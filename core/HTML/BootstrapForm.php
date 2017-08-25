@@ -16,10 +16,12 @@ class BootstrapForm extends Form {
      */
     public function input($name, $label, $options = []){
         $type = isset($options['type']) ? $options['type'] : 'text';
-        return $this->surround(
-            '<label>' . $label . '</label>' .
-              '<input class="form-control" type="' . $type . '" name="' . $name . '" value="' . $this->getValue($name) . '">'
-        );
+        $label = '<label>' . $label . '</label>';
+        if ($type === 'textarea'){
+            $input = '<textarea class="form-control" name="' . $name . '">' . $this->getValue($name) . ' </textarea>';
+        } else
+            $input = '<input class="form-control" type="' . $type . '" name="' . $name . '" value="' . $this->getValue($name) . '">';
+        return $this->surround($label . $input);
     }
 
     protected function submit(){

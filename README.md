@@ -1,5 +1,10 @@
 BlogOPC
 
-Projet dans le parcous Chef de projet - Développement
+Project 3 - Create a blog for a writer
 
-Mise en place d'un blog
+How to use it ?
+- Clone the repo or download the zip archive
+- Launch your local server application (ex : wamp)
+- Select "projet3_birbesVincent"
+- Navigate to the public folder
+- You did it !

@@ -20,14 +20,22 @@ if(!$auth->logged()){
     $app->forbidden();
 }
 
-
-
 ob_start();
 if ($page === 'home'){
     require ROOT. '/pages/admin/articles/index.php';
 } elseif ($page === 'post.detail'){
     require ROOT . '/pages/admin/articles/Article.php';
+} elseif ($page === 'posts.edit'){
+    require ROOT . '/pages/admin/articles/edit.php';
+} elseif ($page === 'post.add'){
+    require ROOT . '/pages/admin/articles/addArticle.php';
+} elseif ($page === 'post.delete'){
+    require ROOT . '/pages/admin/articles/deleteArticle.php';
+} elseif ($page === 'posts.deleteComment'){
+    require ROOT . '/pages/admin/articles/deleteComment.php';
+} elseif ($page === 'posts.ReportComment'){
+    require ROOT . '/pages/admin/articles/ReportComment.php';
 }
 
 $content = ob_get_clean();
-require ROOT . "/pages/templates/default.php";
+require ROOT . "/pages/admin/templates/default.php";
