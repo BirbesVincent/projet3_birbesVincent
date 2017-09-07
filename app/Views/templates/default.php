@@ -10,9 +10,10 @@
     <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,800,700' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="../../public/font-awesome-4.7.0/css/font-awesome.css">
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.js"></script>
+    <link rel="stylesheet" type='text/css' href="font-awesome-4.7.0/css/font-awesome.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
 </head>
 <body>
 <!-- header -->
@@ -21,16 +22,16 @@
         <nav class="navbar navbar-fixed-top navbar-inverse" style="font-size: 120%">
             <div class="container-fluid">
                 <div class="navbar-header">
-                    <button type="button" data-target="#myNavbar" data-toggle="collapse" class="navbar-toggle">
+                    <button type="button" class="navbar-toggle" data-target="#myNavbar" data-toggle="collapse">
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="index?p=posts.index">Billet Simple pour l'Alaska by Jean Forteroche</a>
+                    <div class="col-lg-12"><a class="navbar-brand" href="index?p=posts.index">Billet Simple pour l'Alaska by Jean Forteroche</a></div>
                 </div>
                 <div class="collapse navbar-collapse" id="myNavbar">
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="index?p=posts.index">Accueil</a></li>
+                        <li class="active"><a href="index?p=posts.index">Accueil</a></li>
                         <li><a href="index?p=posts.archives">Archives</a></li>
                         <li><a href="index?p=admin.users.login" role="button">Administration</a></li>
                     </ul>

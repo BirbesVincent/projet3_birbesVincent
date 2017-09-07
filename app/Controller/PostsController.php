@@ -9,10 +9,13 @@ use Core\HTML\BootstrapForm;
 /**
  * Class PostsController
  * @package App\Controller
- * permet
  */
 class PostsController extends AppController {
 
+    /**
+     * PostsController constructor.
+     * get the table depend on model_name
+     */
     public function __construct()
     {
         parent::__construct();
@@ -20,11 +23,18 @@ class PostsController extends AppController {
         $this->loadModel('Comment');
     }
 
+    /**
+     * get all articles & comments
+     */
     public function archives(){
         $posts = $this->Article->getAllArticlesAndComments();
         $this->render('articles.home', compact('posts'));
     }
 
+    /**
+     * @return mixed
+     * get article & comments by $_GET['id']
+     */
     public function show(){
         $post = $this->Article->findById($_GET['id']);
         $allComment = $this->Comment;
@@ -42,9 +52,13 @@ class PostsController extends AppController {
                 return $this->show();
             }
         }
-        $this->render('articles.Article', compact('post','allComment', 'comments', 'footer'));
+        $form = new BootstrapForm();
+        $this->render('articles.Article', compact('post','allComment', 'comments', 'form'));
     }
 
+    /**
+     * change value report for a comment
+     */
     public function report(){
         $postTable = $this->Comment;
         if (!empty($_POST)) {
@@ -54,8 +68,12 @@ class PostsController extends AppController {
         return $res->index();
     }
 
+    /**
+     * get and show all article & comments from db
+     */
     public function index(){
             $posts = $this->Article->getArticlesAndComments();
             $this->render('articles.home', compact('posts'));
     }
+
 }

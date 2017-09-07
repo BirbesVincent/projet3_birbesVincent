@@ -4,9 +4,17 @@ namespace App\Entity;
 
 use Core\Entity\Entity;
 
+/**
+ * Class ArticleEntity
+ * @package App\Entity
+ */
 class ArticleEntity extends Entity {
 
-        public function getUrl(){
+    /**
+     * @return string
+     * return url
+     */
+    public function getUrl(){
             return'index.php?p=posts.show&id=' .$this->id;
         }
 

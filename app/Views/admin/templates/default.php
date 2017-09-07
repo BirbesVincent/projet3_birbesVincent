@@ -26,6 +26,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
                     </button>
                     <a class="navbar-brand" href="index?p=posts.index">Billet Simple pour l'Alaska by Jean Forteroche</a>
                 </div>
@@ -35,7 +36,7 @@
                         <li><a href="index?p=posts.archives">Archives</a></li>
                         <li><a href="index?p=admin.users.login" role="button">Administration</a></li>
                         <?php if ($success_auth = true): ?>
-                            <li></liv><a class="btn btn-danger" style="color: white" href="index?p=admin.users.logout" role="button">Se déconnecter</a></li>
+                            <li><a class="btn btn-danger" style="color: white" href="index?p=admin.users.logout" role="button">Se déconnecter</a></li>
                         <?php endif; ?>
                     </ul>
                 </div>
@@ -48,7 +49,6 @@
     <div class="container" style="background-color: white">
         <?= $content; ?>
     </div>
-
     <div class="container footer">
         <!-- footer -->
         <?php require __DIR__ . '../../../templates/footer.php'; ?>

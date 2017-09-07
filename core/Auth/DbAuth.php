@@ -4,23 +4,36 @@ namespace Core\Auth;
 
 use Core\Database\MysqlDatabase;
 
+/**
+ * Class DbAuth
+ * @package Core\Auth
+ */
 class DbAuth{
 
+    /**
+     * @var MysqlDatabase
+     * save connexion to db
+     */
     private $db;
 
+    /**
+     * DbAuth constructor.
+     * @param MysqlDatabase $db
+     */
     public function __construct(MysqlDatabase $db)
     {
         $this->db = $db;
     }
 
+    /**
+     * @return bool
+     */
     public function getUserId(){
         if($this->logged()){
             return $_SESSION['auth'];
         }
         return false;
     }
-
-
 
      /**
      * @param $username
@@ -41,6 +54,9 @@ class DbAuth{
         return false;
     }
 
+    /**
+     * @return bool
+     */
     public function logged(){
         return isset($_SESSION['auth']);
     }
