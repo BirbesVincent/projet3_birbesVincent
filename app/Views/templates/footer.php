@@ -16,10 +16,10 @@
                             <a href="index?p=admin.users.login" style="color: white;" role="button">Administration</a>
                         </li>
                         <li class="list-group-item text-center" style="background-color: #075d64;">
-                            <a href="index?p=admin.users.login" style="color: white;" role="button">Accueil</a>
+                            <a href="index?p=posts.index" style="color: white;" role="button">Accueil</a>
                         </li>
                         <li class="list-group-item text-center" style="background-color: #075d64;">
-                            <a href="index?p=admin.users.login" style="color: white;" role="button">Archives</a>
+                            <a href="index?p=posts.archives" style="color: white;" role="button">Archives</a>
                         </li>
                     </ul>
                 </div>

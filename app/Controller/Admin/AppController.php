@@ -5,11 +5,22 @@ namespace App\Controller\Admin;
 use \App;
 use Core\Auth\DbAuth;
 
+/**
+ * Class AppController
+ * @package App\Controller\Admin
+ * use to check if user is allow to access admin panel
+ */
 class AppController extends \App\Controller\AppController {
 
+    /**
+     * @var string define the path to the layout
+     */
     protected $template = '../admin/templates/default';
 
-    //sécurité via la connection
+    /**
+     * AppController constructor.
+     * construct app object / link to the db / check for authentification
+     */
     public function __construct()
     {
         parent::__construct();

@@ -1,5 +1,3 @@
-<?php use Core\HTML\BootstrapForm;?>
-
 <div class="content">
     <div class="row">
         <div class="col-lg-12" style="border: solid black 1px;">
@@ -14,8 +12,6 @@
     </div>
     <div class="row">
         <div class="form text-center">
-        <?php
-        $form = new BootstrapForm($comments); ?>
             <form class="form-inline" style="padding-top: 2%;padding-bottom: 2%; " method="post">
                 <?= $form->input('author', 'Votre Pseudo'); ?>
                 <?= $form->input('content', 'Votre message'); ?>

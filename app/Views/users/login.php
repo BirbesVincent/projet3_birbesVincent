@@ -1,4 +1,4 @@
-<div><div class="content" style="padding-top: 1%">
+<div class="content" style="padding-top: 1%">
     <?php if ($errors): ?>
         <p class="alert alert-danger">
             Identifiants incorrects

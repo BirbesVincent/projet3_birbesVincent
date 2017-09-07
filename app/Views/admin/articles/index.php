@@ -1,4 +1,4 @@
-<div class="content" style="margin:0; padding:0;">
+<div class="container-fluid" style="margin:0; padding:0;">
         <div class="text-center">
             <p><img class="img-responsive" src="images/admin_logo.png" style="padding-top: 2%; padding-bottom: 2%;"></p>
         </div>
