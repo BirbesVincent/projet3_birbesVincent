@@ -19,7 +19,7 @@
 <!-- header -->
 <div class="banner">
     <div class="container">
-        <nav class="navbar navbar-fixed-top navbar" style="font-size: 180%; background-color: #c4d1d5; font-family: 'Cooper Black'">
+        <nav class="navbar navbar-fixed-top navbar" style="font-size: 180%; background-color: #A7B5C3; font-family: 'Cooper Black'">
             <div class="container-fluid">
                 <div class="navbar-header">
                     <button type="button" data-target="#myNavbar" data-toggle="collapse" class="navbar-toggle">

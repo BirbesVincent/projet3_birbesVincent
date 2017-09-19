@@ -1,6 +1,6 @@
 
 
-<div class="content">
+<div class="content" style="background: none">
     <div class="travelling">
         <?php foreach ( $posts as $post): ?>
          <div>
@@ -9,12 +9,12 @@
                      <div class="col-lg-12 travelling1" >
                          <div style="float: right">
                              <div>
-                                 <h3 style="padding:3%;color : white; background-color: #FF6F00; width: 100%; height: 100% ">
+                                 <h3 style="padding:3%;color : white; background-color: #2E99AA; width: 100%; height: 100% ">
                                      <?= $post->nb_com; ?> commentaires
                                  </h3>
                              </div>
                              <a href="<?= $post->url ?>" style="color : white;">
-                                 <div style="padding:3%; color : white; background-color: #FF6F00; width: 100%; height: 100% " class="text-center">
+                                 <div style="padding:3%; color : white; background-color: #2E99AA; width: 100%; height: 100% " class="text-center">
                                  Lire la suite
                                  </div>
                              </a>

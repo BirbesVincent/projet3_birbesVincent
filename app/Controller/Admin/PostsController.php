@@ -36,7 +36,6 @@ class PostsController extends AppController {
         $this->render('admin.articles.index', compact('posts','comments', 'reportedComments', 'success_auth'));
     }
 
-
     /**
      * delete a article
      * use $_POST['id'] to select the post to delete
@@ -46,9 +45,9 @@ class PostsController extends AppController {
     $postTable = $this->Article;
     if (!empty($_POST)) {
         $result = $postTable->delete($_POST['id']);
-    }
-            return $this->index();
-    }
+        }
+        header('Location: index?p=admin.posts.index');
+        }
 
     /**
      * delete a comment
@@ -60,7 +59,7 @@ class PostsController extends AppController {
         if (!empty($_POST)) {
             $result = $postTable->delete($_POST['id']);
         }
-        header('Location: admin.posts.index');
+        header('Location: index?p=admin.posts.index');
     }
 
     /**

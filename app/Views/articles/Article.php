@@ -1,12 +1,12 @@
-<div class="content">
-    <div class="row">
+<div class="content" style="background: none">
+    <!--<div class="row">
         <div class="col-lg-12">
             <audio controls="controls" style="width: 100%">
-                <source src="musique/Crimson Tide" type="audio/mp3" />
+                <source src="musique/Sad Calm Ambient Music - Faded Memories" type="audio/mp3" />
                 Votre navigateur n'est pas compatible
             </audio>
         </div>
-    </div>
+    </div>-->
     <div class="row">
         <div class="col-lg-12">
             <h1 class="text-center" style="margin: 1% 0 1% 0;"><?= $post->title; ?></h1>
@@ -32,14 +32,14 @@
     <?php if (!empty($comments)){ ?>
     <div class="row">
         <table class="table table-bordered">
-            <thead>
+            <!--<thead>
                 <tr>
                     <td>Auteur</td>
                     <td>Contenu</td>
                     <td>date</td>
                     <td></td>
                 </tr>
-                </thead>
+                </thead>-->
                 <tbody>
                 <?php foreach ($comments as $comment): ?>
                     <tr>
@@ -47,9 +47,9 @@
                         <td><?= $comment->content; ?></td>
                         <td><?= $comment->date_comment; ?></td>
                         <td>
-                            <form style="padding-top: 2%; width: 100%;" action="?p=posts.Report" method="post">
+                            <form style="width: 100%; height: 50% " action="?p=posts.Report" method="post">
                                 <input type="hidden"  name="id" value="<?= $comment->id; ?>">
-                                <button type="submit" style="width: 100%;" class="btn btn-danger" href="?p=posts.Report&id=<?= $comment->id;?>">Reporter</button>
+                                <button type="submit" style="width: 100%; height: 50%; font-size: 60%" class="btn btn-danger" href="?p=posts.Report&id=<?= $comment->id;?>">Signaler</button>
                             </form>
                         </td>
                     </tr>

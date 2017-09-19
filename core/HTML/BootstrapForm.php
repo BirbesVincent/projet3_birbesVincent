@@ -5,7 +5,7 @@ namespace Core\HTML;
 class BootstrapForm extends Form {
 
     public function surround($html){
-        return "<div class=\"form-group\">{$html}</div>";
+        return "<div class=\"form-group\" style='margin: 0 1% 0 0'>{$html}</div>";
     }
 
     /**

@@ -21,7 +21,7 @@ class ArticleTable extends Table{
      */
     public function getAllArticlesAndComments(){
         return $this->query("SELECT articles.id,articles.title,articles.content,articles.date, COUNT(comments.id) AS nb_com FROM articles LEFT JOIN comments
-        ON articles.id = comments.articles_id GROUP BY articles.id ORDER BY articles.date");
+        ON articles.id = comments.articles_id GROUP BY articles.id ORDER BY articles.date DESC");
     }
 
     /**
@@ -29,7 +29,7 @@ class ArticleTable extends Table{
      */
     public function getArticlesAndComments(){
         return $this->query("SELECT articles.id,articles.title,articles.content,articles.date, COUNT(comments.id) AS nb_com FROM articles LEFT JOIN comments
-        ON articles.id = comments.articles_id GROUP BY articles.id ORDER BY articles.date LIMIT 5");
+        ON articles.id = comments.articles_id GROUP BY articles.id ORDER BY articles.date DESC LIMIT 5");
     }
 
 
