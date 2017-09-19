@@ -29,13 +29,14 @@
                         </div>
                   <div class="row">
                         <div class="col-lg-12" style="padding-top: 2%">
-                            <?= substr($post->content, 0, 200); ?>
+                            <?= substr($post->content, 0, 600); ?>
                         </div>
                   </div>
                       </div>
                  </div>
-                <img src="images/ligne.png" style=" width: 100%; margin: 2% 0% 1% 0%;">
-            </div></div>
+                    <img src="images/ligne.png" style=" width: 100%; margin: 1% 0% 1% 0%;">
+                </div>
+         </div>
     <?php endforeach; ?>
     </div>
 </div>

@@ -1,6 +1,14 @@
 <div class="content">
     <div class="row">
-        <div class="col-lg-12" style="border: solid black 1px;">
+        <div class="col-lg-12">
+            <audio controls="controls" style="width: 100%">
+                <source src="musique/Crimson Tide" type="audio/mp3" />
+                Votre navigateur n'est pas compatible
+            </audio>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
             <h1 class="text-center" style="margin: 1% 0 1% 0;"><?= $post->title; ?></h1>
             <p style="margin: 1%; padding: 0;"><?= $post->content; ?></p>
         </div>
@@ -12,7 +20,7 @@
     </div>
     <div class="row">
         <div class="form text-center">
-            <form class="form-inline" style="padding-top: 2%;padding-bottom: 2%; " method="post">
+            <form class="form-inline" style="padding-top: 1%;padding-bottom: 1%; " method="post">
                 <?= $form->input('author', 'Votre Pseudo'); ?>
                 <?= $form->input('content', 'Votre message'); ?>
                 <button class="btn btn-primary">Envoyer</button>
@@ -20,6 +28,8 @@
         </div>
         <img src="images/ligne.png" style=" width: 100%; margin: 1% 0% 2% 0%;">
     </div>
+
+    <?php if (!empty($comments)){ ?>
     <div class="row">
         <table class="table table-bordered">
             <thead>
@@ -46,6 +56,13 @@
                 <?php endforeach; ?>
                 </tbody>
         </table>
+    <?php }
+        else { ?>
+            <div>
+                <p>Il n'y a aucun commentaires sur ce chapitre pour le moment</p>
+            </div>
+        <?php }
+    ?>
     </div>
 </div>
 

@@ -19,7 +19,7 @@
 <!-- header -->
 <div class="banner">
     <div class="container">
-        <nav class="navbar navbar-fixed-top navbar-inverse" style="font-size: 120%">
+        <nav class="navbar navbar-fixed-top navbar" style="font-size: 180%; background-color: #c4d1d5; font-family: 'Cooper Black'">
             <div class="container-fluid">
                 <div class="navbar-header">
                     <button type="button" data-target="#myNavbar" data-toggle="collapse" class="navbar-toggle">
@@ -48,12 +48,7 @@
 <div class="body-wrap" style="padding-top: 1%; background: linear-gradient(#C4C3C6, white);">
     <div class="container" style="background-color: white">
         <?= $content; ?>
-    </div>
-    <div class="container footer">
-        <!-- footer -->
-        <?php require __DIR__ . '../../../templates/footer.php'; ?>
-        <!-- footer -->
-    </div>
+
 </div>
 
 </body>

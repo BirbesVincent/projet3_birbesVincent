@@ -26,9 +26,9 @@
             </div>
             <div class="row">
                     <div class="list-group">
-                        <div class="col-xs-4" ><a href="facebook.com"><img class="img-responsive" style="padding-right: 5%; height:auto; width: auto;" src="images/facebook_logo1.png"></a></div></li>
-                        <div class="col-xs-4" ><a href="twitter.com"><img class="img-responsive" style="padding-right: 5%; height:auto; width: auto;" src="images/twitter1.png"></a></div></li>
-                        <div class="col-xs-4" ><a href="instagram.com"><img class="img-responsive" style="padding-right: 5%; height:auto; width: auto;" src="images/instagram.png"></a></div></li>
+                        <div class="col-xs-4" ><a href="www.facebook.com"><img class="img-responsive" style="padding-right: 5%; height:auto; width: auto;" src="images/facebook_logo1.png"></a></div></li>
+                        <div class="col-xs-4" ><a href="www.twitter.com"><img class="img-responsive" style="padding-right: 5%; height:auto; width: auto;" src="images/twitter1.png"></a></div></li>
+                        <div class="col-xs-4" ><a href="www.instagram.com"><img class="img-responsive" style="padding-right: 5%; height:auto; width: auto;" src="images/instagram.png"></a></div></li>
                     </div>
             </div>
     </div>

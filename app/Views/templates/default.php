@@ -19,7 +19,7 @@
 <!-- header -->
 <div class="banner">
     <div class="container">
-        <nav class="navbar navbar-fixed-top navbar-inverse" style="font-size: 120%">
+        <nav class="navbar navbar-fixed-top navbar" style="font-size: 180%; background-color: #a7b5c3; font-family: 'Cooper Black'">
             <div class="container-fluid">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-target="#myNavbar" data-toggle="collapse">
@@ -47,13 +47,14 @@
     </div>
 </div>
 
+<!--
 <div class="footer">
-    <div class="container">
+    <div class="container-fluid">
         <!-- footer -->
-        <?php require 'footer.php'; ?>
+        <?php// require 'footer.php'; ?>
         <!-- footer -->
     </div>
-</div>
+</div>-->
 
 </body>
 </html>
