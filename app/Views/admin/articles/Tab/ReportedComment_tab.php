@@ -19,7 +19,7 @@
                 <td>
                     <form style="padding-top: 1%;" action="?p=admin.posts.deleteComment" method="post">
                         <input type="hidden"  name="id" value="<?= $comment->id; ?>">
-                        <button type="submit" class="btn btn-danger" >Supprimer</button>
+                        <button type="submit" class="btn btn-xs btn-danger" >Supprimer</button>
                     </form>
                 </td>
             </tr>

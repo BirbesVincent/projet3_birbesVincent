@@ -49,7 +49,7 @@
                         <td>
                             <form style="width: 100%; height: 50% " action="?p=posts.Report" method="post">
                                 <input type="hidden"  name="id" value="<?= $comment->id; ?>">
-                                <button type="submit" style="width: 100%; height: 50%; font-size: 60%" class="btn btn-danger" href="?p=posts.Report&id=<?= $comment->id;?>">Signaler</button>
+                                <button type="submit" style="width: 100%" class="btn btn-xs btn-danger" href="?p=posts.Report&id=<?= $comment->id;?>">Signaler</button>
                             </form>
                         </td>
                     </tr>

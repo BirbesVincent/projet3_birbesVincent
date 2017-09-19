@@ -26,6 +26,8 @@ $page = explode('.', $page);
 
     if (method_exists($controller, $action)) {
         $controller->$action();
-    } else {
+    }
+    else
+    {
         echo '404';
     }

@@ -22,12 +22,12 @@
         <nav class="navbar navbar-fixed-top navbar" style="font-size: 120%; background-color: #a7b5c3; font-family: 'Cooper Black'">
             <div class="container-fluid">
                 <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-target="#myNavbar" data-toggle="collapse">
+                    <button type="button" class="navbar-toggle" data-target="#myNavbar" data-toggle="collapse" style="color: #0f0f0f">
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <div class="col-lg-12"><a class="navbar-brand" href="index?p=posts.index">Billet Simple pour l'Alaska by Jean Forteroche</a></div>
+                    <div class="col-lg-12"><a class="hidden-sm hidden-xs navbar-brand" href="index?p=posts.index">Billet Simple pour l'Alaska by Jean Forteroche</a></div>
                 </div>
                 <div class="collapse navbar-collapse" id="myNavbar">
                     <ul class="nav navbar-nav navbar-right">
@@ -53,7 +53,7 @@
         <!-- footer -->
         <?php// require 'footer.php'; ?>
         <!-- footer -->
-    </div>
+   <!--</div>
 </div>-->
 
 </body>
