@@ -72,8 +72,8 @@ class PostsController extends AppController {
      * get and show all article & comments from db
      */
     public function index(){
-            $posts = $this->Article->getArticlesAndComments();
-            $this->render('articles.home', compact('posts'));
+        $posts = $this->Article->getArticlesAndComments();
+        $this->render('articles.home', compact('posts'));
     }
 
 }

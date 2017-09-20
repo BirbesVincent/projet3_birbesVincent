@@ -9,13 +9,8 @@ namespace Core\Controller;
  */
 class Controller {
 
-    /**
-     * @var
-     */
     protected $viewPath;
-    /**
-     * @var
-     */
+
     protected $template;
 
     /**
@@ -44,7 +39,7 @@ class Controller {
      * redirection
      * not use
      */
-    protected function notFound(){
+    public function notFound(){
         header('HTTP/1.0 404 Not Found');
         die('Page introuvable');
     }

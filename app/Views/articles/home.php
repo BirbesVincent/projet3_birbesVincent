@@ -12,7 +12,6 @@
                                 <h1>
                                     <a href="<?= $post->url ?>"><?= $post->title; ?></a>
                                 </h1>
-
                                  Posté le <?= $post->date; ?>
                              </div>
                          <div class="col-lg-3 text-center">
@@ -27,13 +26,12 @@
                                  </div>
                              </a>
                          </div>
-
                          <div class="row">
                              <div class="col-lg-12" style="padding-top: 2%">
                                  <?= substr($post->content, 0, 600); ?>
                              </div>
                          </div>
-         </div>
-    <?php endforeach; ?>
+                        </div>
+          <?php endforeach; ?>
     </div>
 </div>

@@ -26,8 +26,8 @@ $page = explode('.', $page);
 
     if (method_exists($controller, $action)) {
         $controller->$action();
-    }
-    else
+    } else
     {
-        echo '404';
+       $yell = new Core\Controller\Controller;
+       $yell->notFound();
     }

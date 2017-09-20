@@ -2,6 +2,10 @@
 
 namespace Core;
 
+/**
+ * Class Autoloader
+ * @package Core
+ */
 class Autoloader{
     /*
      * Enregistre notre autoloader

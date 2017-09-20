@@ -47,14 +47,5 @@
     </div>
 </div>
 
-<!--
-<div class="footer">
-    <div class="container-fluid">
-        <!-- footer -->
-        <?php// require 'footer.php'; ?>
-        <!-- footer -->
-   <!--</div>
-</div>-->
-
 </body>
 </html>

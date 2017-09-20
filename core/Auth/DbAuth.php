@@ -25,20 +25,11 @@ class DbAuth{
         $this->db = $db;
     }
 
-    /**
-     * @return bool
-     */
-    public function getUserId(){
-        if($this->logged()){
-            return $_SESSION['auth'];
-        }
-        return false;
-    }
-
      /**
      * @param $username
      * @param $password
      * @return boolean
+      *get users table and check admin password
      */
     public function login($username, $password){
         $user = $this->db->prepare("SELECT * 
