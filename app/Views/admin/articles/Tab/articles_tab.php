@@ -3,7 +3,7 @@
     <thead>
     <tr>
         <th class="col-lg-10 col-xs-12">Contenu</th>
-        <th class="col-lg-3 col-xs-12">Editer</th>
+        <th class="col-lg-2 col-xs-12">Editer</th>
     </tr>
     </thead>
     <tbody>
@@ -18,7 +18,7 @@
                 <a class="btn btn-info" style="width: 100%;" href="?p=admin.posts.edit&id=<?= $post->id;?>">Editer</a>
                 <form style="padding-top: 2%;" action="?p=admin.posts.delete" method="post">
                     <input type="hidden"  name="id" value="<?= $post->id; ?>">
-                    <button type="submit" style="width: 100%" class="btn btn-danger" href="?p=admin.posts.delete&id=<?= $post->id;?>">Supprimer</button>
+                    <button type="submit" style="width: 100%" class="btn btn-danger" href="?p=admin.posts.delete&id=<?= $post->id;?>"  onclick="return confirm('Cette action est définitive \n Voulez-vous continuer ?')">Supprimer</button>
                 </form>
             </td>
         </tr>

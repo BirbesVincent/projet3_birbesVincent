@@ -17,10 +17,18 @@
                 <td><?= $comment->content; ?></td>
                 <td><?= $comment->date_comment; ; ?></td>
                 <td>
-                    <form style="padding-top: 1%;" action="?p=admin.posts.deleteComment" method="post">
-                        <input type="hidden"  name="id" value="<?= $comment->id; ?>">
-                        <button type="submit" class="btn btn-xs btn-danger" >Supprimer</button>
-                    </form>
+                    <div class="col-lg-4 left">
+                        <form style="display: inline;padding-top: 1%;height: 50%; font-size: 60%" action="?p=admin.posts.deleteComment" method="post">
+                            <input type="hidden"  name="id" value="<?= $comment->id; ?>">
+                            <button type="submit" class="btn btn-xs btn-danger" style="witdh:100%" onclick="return confirm('Cette action est définitive \n Voulez-vous continuer ?')"><span class="glyphicon glyphicon-remove" style="color: white"></span></button>
+                        </form></div>
+                    <div class="col-lg-4">
+                        <form style="display: inline;padding-top: 1%;height: 50%; font-size: 60%" action="?p=admin.posts.unReport" method="post">
+                            <input type="hidden"  name="id" value="<?= $comment->id; ?>">
+                            <button type="submit" class="btn btn-xs btn-success" style="witdh:100%" onclick="return confirm('Cette action valide le commentaire et ôte son signalement')"><span class="glyphicon glyphicon-ok" style="color: white"></span></button>
+                        </form>
+                    </div>
+
                 </td>
             </tr>
         <?php endforeach; ?>

@@ -22,10 +22,10 @@
         <nav class="navbar navbar-fixed-top navbar" style="font-size: 120%; background-color: #a7b5c3; font-family: 'Cooper Black'">
             <div class="container-fluid">
                 <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-target="#myNavbar" data-toggle="collapse" style="color: #0f0f0f">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
+                    <button type="button" class="navbar-toggle" data-target="#myNavbar" data-toggle="collapse" style="color: black;">
+                        <span class="icon-bar" style="background-color: black"></span>
+                        <span class="icon-bar" style="background-color: black"></span>
+                        <span class="icon-bar" style="background-color: black"></span>
                     </button>
                     <div class="col-lg-12"><a class="hidden-sm hidden-xs navbar-brand" href="index?p=posts.index">Billet Simple pour l'Alaska by Jean Forteroche</a></div>
                 </div>
@@ -46,6 +46,5 @@
         <?= $content; ?>
     </div>
 </div>
-
 </body>
 </html>

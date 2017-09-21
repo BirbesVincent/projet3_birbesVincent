@@ -7,12 +7,36 @@
                         <li class="list-group-item list-group-item-success">Pour Modifier un chapitre : cliquer sur le lien "Editer"</li>
                         <li class="list-group-item list-group-item-success">Pour Supprimer un chapitre : cliquer sur le lien "Supprimer"</li>
                         <li class="list-group-item list-group-item-success">Pour Supprimer un commentaire : cliquer sur le lien "Ajouter un nouvel article"</li>
+                        <li class="list-group-item list-group-item-success">Si des commentaires ont été signalés l'onglet "commentaires signalés" sera de couleur orange</li>
                     </ul>
                 </div>
                 <div class="col-lg-3 text-center">
                     <ul class="list-group">
-                        <li class="list-group-item list-group-item-warning">Si des commentaires ont été signalés par les lecteurs l'onglet "commentaires signalés" sera de couleur orange</li>
-                        <li class="list-group-item list-group-item-danger">Toute suppression d'article ou de commentaire est définitive</li>
+
+                        <li class="list-group-item list-group-item-danger">
+                            <div class="row">
+                                <div class="col-lg-2">
+                                    <button type="submit" class="btn btn-xs btn-danger">
+                                        <span class="glyphicon glyphicon-remove" style="color: white"></span>
+                                    </button>
+                                </div>
+                                <div class="col-lg-10">
+                                    Ce bouton permet de supprimer un commentaire
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item list-group-item-success">
+                            <div class="row">
+                                <div class="col-lg-2">
+                                    <button type="submit" class="btn btn-xs btn-success">
+                                        <span class="glyphicon glyphicon-ok" style="color: white"></span>
+                                    </button>
+                                </div>
+                                <div class="col-lg-10">
+                                    Ce bouton permet de valider un commentaire et de l'enlever des commentaires signalés
+                                </div>
+                            </div>
+                        </li>
                     </ul>
                 </div>
             </div>

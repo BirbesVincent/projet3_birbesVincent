@@ -62,6 +62,10 @@ class Table{
         return $this->query("UPDATE {$this->table} SET report = 1 WHERE id = ?",[$id]);
     }
 
+    public function unReport($id){
+        return $this->query("UPDATE {$this->table} SET report = 0 WHERE id = ?",[$id]);
+    }
+
     /**
      * @return array|bool|mixed|\PDOStatement
      * list comments when var report = 1

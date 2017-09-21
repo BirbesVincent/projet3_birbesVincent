@@ -47,7 +47,5 @@ class AppController extends Controller {
     public function notFound(){
         header('HTTP/1.0 404 Not Found');
         echo 'Page introuvable';
-        header( "refresh:5;url=index.php" );
-        echo '</br>Vous allez être redirigé vers la page d\'accueil dans 5 secs.';
     }
 }

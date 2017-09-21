@@ -30,7 +30,7 @@ class PostsController extends AppController {
             header('Location:index.php');
         }
         $success_auth = true;
-        $posts = $this->Article->all();
+        $posts = $this->Article->getAllArticles();
         $comments = $this->Comment->all();
         $reportedComments = $this->Comment->AllReportedComments();
         $this->render('admin.articles.index', compact('posts','comments', 'reportedComments', 'success_auth'));
@@ -102,5 +102,13 @@ class PostsController extends AppController {
             $form = new BootstrapForm($_POST);
             $this->render('admin.articles.edit', compact('postTable', 'form'));
         }
+    }
+
+    public function unReport(){
+        $postTable = $this->Comment;
+        if (!empty($_POST)) {
+            $result = $postTable->unReport($_POST['id']);
+        }
+        return $this->index();
     }
 }

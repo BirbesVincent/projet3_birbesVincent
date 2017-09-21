@@ -32,6 +32,8 @@ class ArticleTable extends Table{
         ON articles.id = comments.articles_id GROUP BY articles.id ORDER BY articles.date DESC LIMIT 5");
     }
 
-
+    public function getAllArticles(){
+        return $this->query("SELECT * FROM articles GROUP BY articles.id ORDER BY articles.date DESC");
+    }
 
 }

@@ -45,11 +45,12 @@
                     <tr>
                         <td><?= $comment->author; ?></td>
                         <td><?= $comment->content; ?></td>
-                        <td><?= $comment->date_comment; ?></td>
+                        <td class="hidden-xs"><?= $comment->date_comment; ?></td>
                         <td>
                             <form style="width: 100%; height: 50% " action="?p=posts.Report" method="post">
                                 <input type="hidden"  name="id" value="<?= $comment->id; ?>">
-                                <button type="submit" style="width: 100%" class="btn btn-xs btn-danger" href="?p=posts.Report&id=<?= $comment->id;?>">Signaler</button>
+                                <button type="submit" style="width: 100%" class="btn btn-xs btn-danger" href="?p=posts.Report&id=<?= $comment->id;?>"
+                                        onclick="return confirm('Signaler le commentaire suivant ?\n<?= $comment->author; ?> : <?= $comment->content; ?>')" >Signaler</button>
                             </form>
                         </td>
                     </tr>
